@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.node_modules.lock
+
+# Build output
+dist/
+.output/
+.nitro/
+.vinxi/
+.tanstack/
+build/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Deployment / platform local state
+.vercel/
+.project_id
+
+# QA / generated working files
+screenshots/*
+!screenshots/.gitkeep
+artifacts/
+
+# Private source material (business plans, photos, docs)
+attachments/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Misc
+*.tsbuildinfo
+coverage/

@@ -1,0 +1,42 @@
+# Pegasus MedFlight
+
+> A medical logistics intelligence system with courier execution. Target markets: Phoenix, Arizona, and San Diego, California. Reliable. Traceable. Compliant.
+
+Pegasus MedFlight. Founder oversight on every trip.
+
+Target markets:
+- Phoenix, Arizona: Tempe, Mesa, Chandler, Gilbert, Scottsdale, Queen Creek, and surrounding communities.
+- San Diego, California: San Diego, La Jolla, Hillcrest, Kearny Mesa, Chula Vista, Oceanside, and surrounding communities.
+
+Not nationwide. Pegasus MedFlight is not an air ambulance, not helicopter EMS, and not a hospital. PEGA1 is a ground courier vehicle with a trained driver. Customer-facing language uses trip and driver.
+
+## What it does
+
+1. Execute — documented medical courier trips with chain of custody, temperature awareness, live telemetry, and partner communication.
+2. Analyze — trip history into operational insight (what moved, when, exceptions, cost pressure).
+3. Forecast — a roadmap after enough verified trip data exists. Not a launch-day savings claim.
+
+## The stack
+
+- THE SKY — operations command center
+- SKY Bay — virtual office for the Medical Partner, CAPTAIN, the driver, and the Pegasus Operator
+- SKY Linq — driver execution app
+- CAPTAIN — AI assistant for dispatch, routing, SLA, and exceptions (human remains accountable)
+- PEGA1 — FSD-capable launch vehicle with live telemetry, CAPTAIN, Sentry Mode, temperature-aware workflows
+- Drivers — trained operators accountable for pickup, custody, and delivery
+
+## Launch Program
+
+A defined, paid medical logistics engagement with written scope. Not a demo. Medical Partners apply for one route, corridor, overflow function, or service class. Drivers apply to operate PEGA1.
+
+## Pages
+
+- [The Problem](https://pegasusmedflight.com/): industry problem and how a trip works
+- [The Stack](https://pegasusmedflight.com/stack): components of the system and PEGA1
+- [Intelligence](https://pegasusmedflight.com/system): Execute → Analyze → Forecast
+- [Launch Program](https://pegasusmedflight.com/partners): paid Launch in Phoenix or San Diego
+- [Get Started](https://pegasusmedflight.com/request): Medical Partner and driver applications
+
+## Contact
+
+- Email: captain@pegasusmedflight.com

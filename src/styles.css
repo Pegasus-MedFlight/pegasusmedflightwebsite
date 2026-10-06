@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: var(--pega-bg);
+  --color-navy-deep: var(--pega-bg);
+  --color-surface: var(--pega-surface);
+  --color-elevated: var(--pega-elevated);
+  --color-panel: var(--pega-panel);
+  --color-fg: var(--pega-fg);
+  --color-muted: var(--pega-muted);
+  --color-subtle: var(--pega-subtle);
+  --color-gold: var(--pega-gold);
+  --color-gold-bright: var(--pega-gold-bright);
+  --color-gold-fg: var(--pega-gold-fg);
+  --color-star: var(--pega-star);
+  --color-line: var(--pega-line);
+  --color-line-strong: var(--pega-line-strong);
+  --color-ok: var(--pega-ok);
+
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Rajdhani", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+
+  --tracking-nav: 0.22em;
+  --tracking-kicker: 0.28em;
+}
+
+:root {
+  color-scheme: light;
+  --pega-bg: #f4f0e6;
+  --pega-surface: #ebe5d8;
+  --pega-elevated: #fbf8f1;
+  --pega-panel: #e4ddd0;
+  --pega-fg: #0c1520;
+  --pega-muted: #4a5866;
+  --pega-subtle: #6a7682;
+  --pega-gold: #8d6524;
+  --pega-gold-bright: #a67c2d;
+  --pega-gold-fg: #fffaf0;
+  --pega-star: #0c1520;
+  --pega-line: color-mix(in oklab, #0c1520 12%, transparent);
+  --pega-line-strong: color-mix(in oklab, #0c1520 22%, transparent);
+  --pega-ok: #3f6b45;
+}
+
+.dark {
+  color-scheme: dark;
+  --pega-bg: #070f18;
+  --pega-surface: #0c1520;
+  --pega-elevated: #121c2a;
+  --pega-panel: #162233;
+  --pega-fg: #f3efe4;
+  --pega-muted: #9aa7b5;
+  --pega-subtle: #6d7a88;
+  --pega-gold: #c6a35a;
+  --pega-gold-bright: #d8b66c;
+  --pega-gold-fg: #0a0e14;
+  --pega-star: #f3efe4;
+  --pega-line: color-mix(in oklab, #f3efe4 12%, transparent);
+  --pega-line-strong: color-mix(in oklab, #f3efe4 22%, transparent);
+  --pega-ok: #7d9a7a;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(5rem + env(safe-area-inset-top));
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img,
+  video,
+  svg {
+    max-width: 100%;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-gold-fg);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .tracking-nav {
+    letter-spacing: var(--tracking-nav);
+  }
+
+  .tracking-kicker {
+    letter-spacing: var(--tracking-kicker);
+  }
+}
+
+.hero-car {
+  max-height: min(38vh, 280px);
+}
+
+@media (min-width: 640px) {
+  .hero-car {
+    max-height: min(46vh, 400px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-car {
+    max-height: min(70vh, 620px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-in,
+  .hero-in-delay,
+  .hero-in-late,
+  .map-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+.hero-in {
+  animation: rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-in-delay {
+  animation: rise 700ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+}
+.hero-in-late {
+  animation: rise 800ms cubic-bezier(0.22, 1, 0.36, 1) 240ms both;
+}
+
+.map-pulse {
+  transform-origin: center;
+  animation: pulse-ring 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
